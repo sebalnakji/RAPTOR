@@ -17,15 +17,14 @@
 - /home/pjtl2w01admin/btw/fast-api
 
 [테스트 주소]
-- http://sbtglobal2.iptime.org:14801/docs
 
 ## 1. embeding_api
 
 [API]
 
-- bge-m3: http://sbtglobal2.iptime.org:14801/data-preprocessing/v1/embedding/bge
-- MiniLM: http://sbtglobal2.iptime.org:14801/data-preprocessing/v1/embedding/minilm
-- KR-SBERT: http://sbtglobal2.iptime.org:14801/data-preprocessing/v1/embedding/krsbert
+- bge-m3: 
+- MiniLM: 
+- KR-SBERT: 
 
 [bge-m3]
 - Hyper Parameter
@@ -47,8 +46,8 @@
 ## 2. summarize_api
 
 [API]
-- Llama3: http://sbtglobal2.iptime.org:14801/data-preprocessing/v1/summarize/llama3
-- T5: http://sbtglobal2.iptime.org:14801/data-preprocessing/v1/summarize/t5
+- Llama3: 
+- T5: 
 
 [Llama3]
 - segCount: 요약할 문장 목록을 분리할 문단 수 (-1일 경우 최적 문단 수로 분리)
@@ -62,8 +61,8 @@
 ## 3. segmentation_api
 
 [API]
-- Llama3: http://sbtglobal2.iptime.org:14801/data-preprocessing/v1/segmentation/llama3
-- nltk: http://sbtglobal2.iptime.org:14801/data-preprocessing/v1/segmentation/nltk
+- Llama3: 
+- nltk: 
 
 [Llama3]
 - segCount: 요약할 문장 목록을 분리할 문단 수 (-1일 경우 최적 문단 수로 분리)
@@ -77,7 +76,7 @@
 ## 4. pdf-to-text_api
 
 [API]
-- pdf-to-text: http://sbtglobal2.iptime.org:14801/data-preprocess/v1/convert/pdf-to-text
+- pdf-to-text: 
 
 [pdf-to-text]
 - PDF의 이미지와 표의 프레임을 제외한 모든 텍스트 추출
@@ -85,7 +84,7 @@
 ## 5. RAPTOR
 
 [API]
-- RAPTOR: http://sbtglobal2.iptime.org:14802/data-preprocessing/v1/raptor/run/{raptorIdx}
+- RAPTOR: 
 
 [RAPTOR]
 - databaseName: Milvus 데이터베이스명(워크스페이스 관리ID)\n
