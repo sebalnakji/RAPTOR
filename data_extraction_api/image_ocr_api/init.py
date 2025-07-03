@@ -1,0 +1,1 @@
+from .routes import image_ocr_router
