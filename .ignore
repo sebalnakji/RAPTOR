@@ -1,0 +1,12 @@
+# __pycache__ 디렉터리 무시
+__pycache__/
+raptor_api/__pycache__/
+stable_diffusion/
+models/__pycache__/
+
+# 환경 변수 파일 무시
+.env
+
+# 로그 파일 무시
+log/
+log-raptor/
