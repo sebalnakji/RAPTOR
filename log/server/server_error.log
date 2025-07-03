@@ -1,0 +1,2387 @@
+[2024-08-07 19:22:59 +0900] [48531] [INFO] Starting gunicorn 22.0.0
+[2024-08-07 19:22:59 +0900] [48531] [INFO] Listening at: http://0.0.0.0:8001 (48531)
+[2024-08-07 19:22:59 +0900] [48531] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2024-08-07 19:22:59 +0900] [48533] [INFO] Booting worker with pid: 48533
+[2024-08-07 19:22:59 +0900] [48534] [INFO] Booting worker with pid: 48534
+[2024-08-07 19:22:59 +0900] [48535] [INFO] Booting worker with pid: 48535
+[2024-08-07 19:22:59 +0900] [48536] [INFO] Booting worker with pid: 48536
+[2024-08-07 19:22:59 +0900] [48537] [INFO] Booting worker with pid: 48537
+[2024-08-07 19:22:59 +0900] [48538] [INFO] Booting worker with pid: 48538
+[2024-08-07 19:22:59 +0900] [48539] [INFO] Booting worker with pid: 48539
+[2024-08-07 19:22:59 +0900] [48540] [INFO] Booting worker with pid: 48540
+[2024-08-07 19:22:59 +0900] [48541] [INFO] Booting worker with pid: 48541
+[2024-08-07 19:22:59 +0900] [48535] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/home/pjtl2w01admin/btw/fast-api/main.py", line 8, in <module>
+    from models_api.embedding_api.routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/__init__.py", line 1, in <module>
+    from .routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/routes.py", line 1, in <module>
+    from logging_config import models_embedding_logger
+  File "/home/pjtl2w01admin/btw/fast-api/logging_config.py", line 20, in <module>
+    models_summarize_logger = setup_logger('models_summarize', '/home/pjtl2w01admin/btw/fast-api/log/models/embedding/summarize/models_summarize.log')
+  File "/home/pjtl2w01admin/btw/fast-api/logging_config.py", line 7, in setup_logger
+    handler = RotatingFileHandler(log_file, maxBytes=10*1024*1024, backupCount=5)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/logging/handlers.py", line 153, in __init__
+    BaseRotatingHandler.__init__(self, filename, mode, encoding=encoding,
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/logging/handlers.py", line 58, in __init__
+    logging.FileHandler.__init__(self, filename, mode=mode,
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/logging/__init__.py", line 1146, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/logging/__init__.py", line 1175, in _open
+    return open(self.baseFilename, self.mode, encoding=self.encoding,
+FileNotFoundError: [Errno 2] No such file or directory: '/home/pjtl2w01admin/btw/fast-api/log/models/embedding/summarize/models_summarize.log'
+[2024-08-07 19:22:59 +0900] [48535] [INFO] Worker exiting (pid: 48535)
+[2024-08-07 19:22:59 +0900] [48536] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/home/pjtl2w01admin/btw/fast-api/main.py", line 8, in <module>
+    from models_api.embedding_api.routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/__init__.py", line 1, in <module>
+    from .routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/routes.py", line 1, in <module>
+    from logging_config import models_embedding_logger
+  File "/home/pjtl2w01admin/btw/fast-api/logging_config.py", line 20, in <module>
+    models_summarize_logger = setup_logger('models_summarize', '/home/pjtl2w01admin/btw/fast-api/log/models/embedding/summarize/models_summarize.log')
+  File "/home/pjtl2w01admin/btw/fast-api/logging_config.py", line 7, in setup_logger
+    handler = RotatingFileHandler(log_file, maxBytes=10*1024*1024, backupCount=5)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/logging/handlers.py", line 153, in __init__
+    BaseRotatingHandler.__init__(self, filename, mode, encoding=encoding,
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/logging/handlers.py", line 58, in __init__
+    logging.FileHandler.__init__(self, filename, mode=mode,
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/logging/__init__.py", line 1146, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/logging/__init__.py", line 1175, in _open
+    return open(self.baseFilename, self.mode, encoding=self.encoding,
+FileNotFoundError: [Errno 2] No such file or directory: '/home/pjtl2w01admin/btw/fast-api/log/models/embedding/summarize/models_summarize.log'
+[2024-08-07 19:22:59 +0900] [48536] [INFO] Worker exiting (pid: 48536)
+[2024-08-07 19:22:59 +0900] [48533] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/home/pjtl2w01admin/btw/fast-api/main.py", line 8, in <module>
+    from models_api.embedding_api.routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/__init__.py", line 1, in <module>
+    from .routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/routes.py", line 1, in <module>
+    from logging_config import models_embedding_logger
+  File "/home/pjtl2w01admin/btw/fast-api/logging_config.py", line 20, in <module>
+    models_summarize_logger = setup_logger('models_summarize', '/home/pjtl2w01admin/btw/fast-api/log/models/embedding/summarize/models_summarize.log')
+  File "/home/pjtl2w01admin/btw/fast-api/logging_config.py", line 7, in setup_logger
+    handler = RotatingFileHandler(log_file, maxBytes=10*1024*1024, backupCount=5)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/logging/handlers.py", line 153, in __init__
+    BaseRotatingHandler.__init__(self, filename, mode, encoding=encoding,
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/logging/handlers.py", line 58, in __init__
+    logging.FileHandler.__init__(self, filename, mode=mode,
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/logging/__init__.py", line 1146, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/logging/__init__.py", line 1175, in _open
+    return open(self.baseFilename, self.mode, encoding=self.encoding,
+FileNotFoundError: [Errno 2] No such file or directory: '/home/pjtl2w01admin/btw/fast-api/log/models/embedding/summarize/models_summarize.log'
+[2024-08-07 19:22:59 +0900] [48533] [INFO] Worker exiting (pid: 48533)
+[2024-08-07 19:22:59 +0900] [48542] [INFO] Booting worker with pid: 48542
+[2024-08-07 19:22:59 +0900] [48531] [ERROR] Worker (pid:48535) exited with code 3
+[2024-08-07 19:22:59 +0900] [48531] [ERROR] Worker (pid:48542) was sent SIGTERM!
+[2024-08-07 19:22:59 +0900] [48531] [ERROR] Worker (pid:48541) was sent SIGTERM!
+[2024-08-07 19:22:59 +0900] [48531] [ERROR] Worker (pid:48533) was sent SIGTERM!
+[2024-08-07 19:22:59 +0900] [48531] [ERROR] Worker (pid:48540) was sent SIGTERM!
+[2024-08-07 19:22:59 +0900] [48531] [ERROR] Worker (pid:48534) was sent SIGTERM!
+[2024-08-07 19:22:59 +0900] [48531] [ERROR] Worker (pid:48538) was sent SIGTERM!
+[2024-08-07 19:22:59 +0900] [48531] [ERROR] Worker (pid:48539) was sent SIGTERM!
+[2024-08-07 19:22:59 +0900] [48531] [ERROR] Worker (pid:48536) was sent SIGTERM!
+[2024-08-07 19:22:59 +0900] [48531] [ERROR] Worker (pid:48537) was sent SIGTERM!
+[2024-08-07 19:22:59 +0900] [48531] [ERROR] Shutting down: Master
+[2024-08-07 19:22:59 +0900] [48531] [ERROR] Reason: Worker failed to boot.
+[2024-08-07 19:23:59 +0900] [48955] [INFO] Starting gunicorn 22.0.0
+[2024-08-07 19:23:59 +0900] [48955] [INFO] Listening at: http://0.0.0.0:8001 (48955)
+[2024-08-07 19:23:59 +0900] [48955] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2024-08-07 19:23:59 +0900] [48957] [INFO] Booting worker with pid: 48957
+[2024-08-07 19:23:59 +0900] [48958] [INFO] Booting worker with pid: 48958
+[2024-08-07 19:23:59 +0900] [48959] [INFO] Booting worker with pid: 48959
+[2024-08-07 19:23:59 +0900] [48960] [INFO] Booting worker with pid: 48960
+[2024-08-07 19:23:59 +0900] [48964] [INFO] Booting worker with pid: 48964
+[2024-08-07 19:23:59 +0900] [48965] [INFO] Booting worker with pid: 48965
+[2024-08-07 19:23:59 +0900] [48969] [INFO] Booting worker with pid: 48969
+[2024-08-07 19:23:59 +0900] [48970] [INFO] Booting worker with pid: 48970
+[2024-08-07 19:23:59 +0900] [48971] [INFO] Booting worker with pid: 48971
+[2024-08-07 19:23:59 +0900] [48972] [INFO] Booting worker with pid: 48972
+[2024-08-07 19:23:59 +0900] [48958] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/home/pjtl2w01admin/btw/fast-api/main.py", line 8, in <module>
+    from models_api.embedding_api.routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/__init__.py", line 1, in <module>
+    from .routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/routes.py", line 1, in <module>
+    from logging_config import models_embedding_logger
+  File "/home/pjtl2w01admin/btw/fast-api/logging_config.py", line 20, in <module>
+    models_summarize_logger = setup_logger('models_summarize', '/home/pjtl2w01admin/btw/fast-api/log/models/embedding/summarize/models_summarize.log')
+  File "/home/pjtl2w01admin/btw/fast-api/logging_config.py", line 7, in setup_logger
+    handler = RotatingFileHandler(log_file, maxBytes=10*1024*1024, backupCount=5)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/logging/handlers.py", line 153, in __init__
+    BaseRotatingHandler.__init__(self, filename, mode, encoding=encoding,
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/logging/handlers.py", line 58, in __init__
+    logging.FileHandler.__init__(self, filename, mode=mode,
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/logging/__init__.py", line 1146, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/logging/__init__.py", line 1175, in _open
+    return open(self.baseFilename, self.mode, encoding=self.encoding,
+FileNotFoundError: [Errno 2] No such file or directory: '/home/pjtl2w01admin/btw/fast-api/log/models/embedding/summarize/models_summarize.log'
+[2024-08-07 19:23:59 +0900] [48958] [INFO] Worker exiting (pid: 48958)
+[2024-08-07 19:23:59 +0900] [48959] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/home/pjtl2w01admin/btw/fast-api/main.py", line 8, in <module>
+    from models_api.embedding_api.routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/__init__.py", line 1, in <module>
+    from .routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/routes.py", line 1, in <module>
+    from logging_config import models_embedding_logger
+  File "/home/pjtl2w01admin/btw/fast-api/logging_config.py", line 20, in <module>
+    models_summarize_logger = setup_logger('models_summarize', '/home/pjtl2w01admin/btw/fast-api/log/models/embedding/summarize/models_summarize.log')
+  File "/home/pjtl2w01admin/btw/fast-api/logging_config.py", line 7, in setup_logger
+    handler = RotatingFileHandler(log_file, maxBytes=10*1024*1024, backupCount=5)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/logging/handlers.py", line 153, in __init__
+    BaseRotatingHandler.__init__(self, filename, mode, encoding=encoding,
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/logging/handlers.py", line 58, in __init__
+    logging.FileHandler.__init__(self, filename, mode=mode,
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/logging/__init__.py", line 1146, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/logging/__init__.py", line 1175, in _open
+    return open(self.baseFilename, self.mode, encoding=self.encoding,
+FileNotFoundError: [Errno 2] No such file or directory: '/home/pjtl2w01admin/btw/fast-api/log/models/embedding/summarize/models_summarize.log'
+[2024-08-07 19:23:59 +0900] [48959] [INFO] Worker exiting (pid: 48959)
+[2024-08-07 19:23:59 +0900] [48973] [INFO] Booting worker with pid: 48973
+[2024-08-07 19:23:59 +0900] [48955] [ERROR] Worker (pid:48958) exited with code 3
+[2024-08-07 19:23:59 +0900] [48955] [ERROR] Worker (pid:48959) exited with code 3
+[2024-08-07 19:23:59 +0900] [48955] [ERROR] Worker (pid:48973) was sent SIGTERM!
+[2024-08-07 19:25:59 +0900] [49667] [INFO] Starting gunicorn 22.0.0
+[2024-08-07 19:25:59 +0900] [49667] [INFO] Listening at: http://0.0.0.0:8001 (49667)
+[2024-08-07 19:25:59 +0900] [49667] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2024-08-07 19:25:59 +0900] [49669] [INFO] Booting worker with pid: 49669
+[2024-08-07 19:25:59 +0900] [49670] [INFO] Booting worker with pid: 49670
+[2024-08-07 19:26:00 +0900] [49671] [INFO] Booting worker with pid: 49671
+[2024-08-07 19:26:00 +0900] [49672] [INFO] Booting worker with pid: 49672
+[2024-08-07 19:26:00 +0900] [49673] [INFO] Booting worker with pid: 49673
+[2024-08-07 19:26:00 +0900] [49674] [INFO] Booting worker with pid: 49674
+[2024-08-07 19:26:00 +0900] [49675] [INFO] Booting worker with pid: 49675
+[2024-08-07 19:26:00 +0900] [49676] [INFO] Booting worker with pid: 49676
+[2024-08-07 19:26:00 +0900] [49677] [INFO] Booting worker with pid: 49677
+[2024-08-07 19:26:00 +0900] [49678] [INFO] Booting worker with pid: 49678
+[2024-08-07 19:26:00 +0900] [49679] [INFO] Booting worker with pid: 49679
+[2024-08-07 19:26:00 +0900] [49680] [INFO] Booting worker with pid: 49680
+[2024-08-07 19:26:28 +0900] [49669] [INFO] Started server process [49669]
+[2024-08-07 19:26:28 +0900] [49669] [INFO] Waiting for application startup.
+[2024-08-07 19:26:28 +0900] [49669] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-07 19:26:28 +0900] [49669] [INFO] Application startup complete.
+[2024-08-07 19:26:28 +0900] [49672] [INFO] Started server process [49672]
+[2024-08-07 19:26:28 +0900] [49672] [INFO] Waiting for application startup.
+[2024-08-07 19:26:28 +0900] [49672] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-07 19:26:28 +0900] [49672] [INFO] Application startup complete.
+[2024-08-07 19:26:29 +0900] [49679] [INFO] Started server process [49679]
+[2024-08-07 19:26:29 +0900] [49679] [INFO] Waiting for application startup.
+[2024-08-07 19:26:29 +0900] [49679] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-07 19:26:29 +0900] [49679] [INFO] Application startup complete.
+[2024-08-07 19:26:29 +0900] [49677] [INFO] Started server process [49677]
+[2024-08-07 19:26:29 +0900] [49677] [INFO] Waiting for application startup.
+[2024-08-07 19:26:29 +0900] [49677] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-07 19:26:29 +0900] [49677] [INFO] Application startup complete.
+[2024-08-07 19:26:29 +0900] [49673] [INFO] Started server process [49673]
+[2024-08-07 19:26:29 +0900] [49673] [INFO] Waiting for application startup.
+[2024-08-07 19:26:29 +0900] [49673] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-07 19:26:29 +0900] [49673] [INFO] Application startup complete.
+[2024-08-07 19:26:29 +0900] [49675] [INFO] Started server process [49675]
+[2024-08-07 19:26:29 +0900] [49675] [INFO] Waiting for application startup.
+[2024-08-07 19:26:29 +0900] [49675] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-07 19:26:29 +0900] [49675] [INFO] Application startup complete.
+[2024-08-07 19:26:29 +0900] [49670] [INFO] Started server process [49670]
+[2024-08-07 19:26:29 +0900] [49670] [INFO] Waiting for application startup.
+[2024-08-07 19:26:29 +0900] [49670] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-07 19:26:29 +0900] [49670] [INFO] Application startup complete.
+[2024-08-07 19:26:29 +0900] [49680] [INFO] Started server process [49680]
+[2024-08-07 19:26:29 +0900] [49680] [INFO] Waiting for application startup.
+[2024-08-07 19:26:29 +0900] [49680] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-07 19:26:29 +0900] [49680] [INFO] Application startup complete.
+[2024-08-07 19:26:29 +0900] [49674] [INFO] Started server process [49674]
+[2024-08-07 19:26:29 +0900] [49674] [INFO] Waiting for application startup.
+[2024-08-07 19:26:29 +0900] [49674] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-07 19:26:29 +0900] [49674] [INFO] Application startup complete.
+[2024-08-07 19:26:29 +0900] [49671] [INFO] Started server process [49671]
+[2024-08-07 19:26:29 +0900] [49671] [INFO] Waiting for application startup.
+[2024-08-07 19:26:29 +0900] [49671] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-07 19:26:29 +0900] [49671] [INFO] Application startup complete.
+[2024-08-07 19:26:29 +0900] [49676] [INFO] Started server process [49676]
+[2024-08-07 19:26:29 +0900] [49676] [INFO] Waiting for application startup.
+[2024-08-07 19:26:29 +0900] [49676] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-07 19:26:29 +0900] [49676] [INFO] Application startup complete.
+[2024-08-07 19:26:29 +0900] [49678] [INFO] Started server process [49678]
+[2024-08-07 19:26:29 +0900] [49678] [INFO] Waiting for application startup.
+[2024-08-07 19:26:29 +0900] [49678] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-07 19:26:29 +0900] [49678] [INFO] Application startup complete.
+[2024-08-07 19:46:39 +0900] [49667] [CRITICAL] WORKER TIMEOUT (pid:49671)
+[2024-08-07 19:46:40 +0900] [49667] [ERROR] Worker (pid:49671) was sent code 134!
+[2024-08-07 19:46:40 +0900] [59339] [INFO] Booting worker with pid: 59339
+[2024-08-07 19:47:00 +0900] [59339] [INFO] Started server process [59339]
+[2024-08-07 19:47:00 +0900] [59339] [INFO] Waiting for application startup.
+[2024-08-07 19:47:00 +0900] [59339] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-07 19:47:00 +0900] [59339] [INFO] Application startup complete.
+[2024-08-08 08:41:45 +0900] [49672] [INFO] Shutting down
+[2024-08-08 08:41:45 +0900] [49672] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-08 08:41:45 +0900] [49667] [INFO] Handling signal: term
+[2024-08-08 08:41:45 +0900] [49676] [INFO] Shutting down
+[2024-08-08 08:41:45 +0900] [49676] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-08 08:41:45 +0900] [49674] [INFO] Shutting down
+[2024-08-08 08:41:45 +0900] [49674] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-08 08:41:46 +0900] [49678] [INFO] Shutting down
+[2024-08-08 08:41:46 +0900] [49678] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-08 08:41:46 +0900] [49670] [INFO] Shutting down
+[2024-08-08 08:41:46 +0900] [49673] [INFO] Shutting down
+[2024-08-08 08:41:46 +0900] [49677] [INFO] Shutting down
+[2024-08-08 08:41:46 +0900] [49670] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-08 08:41:46 +0900] [49673] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-08 08:41:46 +0900] [49677] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-08 08:41:46 +0900] [59339] [INFO] Shutting down
+[2024-08-08 08:41:46 +0900] [59339] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-08 08:41:46 +0900] [49679] [INFO] Shutting down
+[2024-08-08 08:41:46 +0900] [49679] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-08 08:41:46 +0900] [49669] [INFO] Shutting down
+[2024-08-08 08:41:46 +0900] [49669] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-08 08:41:46 +0900] [49675] [INFO] Shutting down
+[2024-08-08 08:41:46 +0900] [49675] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-08 08:41:46 +0900] [49680] [INFO] Shutting down
+[2024-08-08 08:41:46 +0900] [49680] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-08 08:41:46 +0900] [49672] [INFO] Finished server process [49672]
+[2024-08-08 08:41:46 +0900] [59339] [INFO] Finished server process [59339]
+[2024-08-08 08:41:46 +0900] [49676] [INFO] Finished server process [49676]
+[2024-08-08 08:41:46 +0900] [49675] [INFO] Finished server process [49675]
+[2024-08-08 08:41:46 +0900] [49680] [INFO] Finished server process [49680]
+[2024-08-08 08:41:46 +0900] [49673] [INFO] Finished server process [49673]
+[2024-08-08 08:41:46 +0900] [49670] [INFO] Finished server process [49670]
+[2024-08-08 08:41:46 +0900] [49678] [INFO] Finished server process [49678]
+[2024-08-08 08:41:46 +0900] [49679] [INFO] Finished server process [49679]
+[2024-08-08 08:41:46 +0900] [49674] [INFO] Finished server process [49674]
+[2024-08-08 08:41:46 +0900] [49677] [INFO] Finished server process [49677]
+[2024-08-08 08:41:46 +0900] [49669] [INFO] Finished server process [49669]
+[2024-08-08 08:41:46 +0900] [49667] [ERROR] Worker (pid:49676) was sent SIGTERM!
+[2024-08-08 08:41:46 +0900] [49667] [ERROR] Worker (pid:49672) was sent SIGTERM!
+[2024-08-08 08:41:46 +0900] [49667] [ERROR] Worker (pid:49675) was sent SIGTERM!
+[2024-08-08 08:41:46 +0900] [49667] [ERROR] Worker (pid:49678) was sent SIGTERM!
+[2024-08-08 08:41:46 +0900] [49667] [ERROR] Worker (pid:49680) was sent SIGTERM!
+[2024-08-08 08:41:46 +0900] [49667] [ERROR] Worker (pid:49677) was sent SIGTERM!
+[2024-08-08 08:41:46 +0900] [49667] [ERROR] Worker (pid:49669) was sent SIGTERM!
+[2024-08-08 08:41:46 +0900] [49667] [ERROR] Worker (pid:49673) was sent SIGTERM!
+[2024-08-08 08:41:47 +0900] [49667] [ERROR] Worker (pid:49670) was sent SIGTERM!
+[2024-08-08 08:41:47 +0900] [49667] [ERROR] Worker (pid:49679) was sent SIGTERM!
+[2024-08-08 08:41:47 +0900] [49667] [ERROR] Worker (pid:49674) was sent SIGTERM!
+[2024-08-08 08:41:47 +0900] [49667] [ERROR] Worker (pid:59339) was sent SIGTERM!
+[2024-08-08 08:41:47 +0900] [49667] [INFO] Shutting down: Master
+[2024-08-08 08:42:19 +0900] [210011] [INFO] Starting gunicorn 22.0.0
+[2024-08-08 08:42:19 +0900] [210011] [INFO] Listening at: http://0.0.0.0:8001 (210011)
+[2024-08-08 08:42:19 +0900] [210011] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2024-08-08 08:42:19 +0900] [210013] [INFO] Booting worker with pid: 210013
+[2024-08-08 08:42:20 +0900] [210014] [INFO] Booting worker with pid: 210014
+[2024-08-08 08:42:20 +0900] [210015] [INFO] Booting worker with pid: 210015
+[2024-08-08 08:42:20 +0900] [210016] [INFO] Booting worker with pid: 210016
+[2024-08-08 08:42:20 +0900] [210017] [INFO] Booting worker with pid: 210017
+[2024-08-08 08:42:20 +0900] [210018] [INFO] Booting worker with pid: 210018
+[2024-08-08 08:42:20 +0900] [210019] [INFO] Booting worker with pid: 210019
+[2024-08-08 08:42:20 +0900] [210020] [INFO] Booting worker with pid: 210020
+[2024-08-08 08:42:20 +0900] [210021] [INFO] Booting worker with pid: 210021
+[2024-08-08 08:42:20 +0900] [210022] [INFO] Booting worker with pid: 210022
+[2024-08-08 08:42:20 +0900] [210023] [INFO] Booting worker with pid: 210023
+[2024-08-08 08:42:20 +0900] [210024] [INFO] Booting worker with pid: 210024
+[2024-08-08 08:42:50 +0900] [210016] [INFO] Started server process [210016]
+[2024-08-08 08:42:50 +0900] [210016] [INFO] Waiting for application startup.
+[2024-08-08 08:42:50 +0900] [210016] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-08 08:42:50 +0900] [210016] [INFO] Application startup complete.
+[2024-08-08 08:42:50 +0900] [210017] [INFO] Started server process [210017]
+[2024-08-08 08:42:50 +0900] [210017] [INFO] Waiting for application startup.
+[2024-08-08 08:42:50 +0900] [210017] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-08 08:42:50 +0900] [210017] [INFO] Application startup complete.
+[2024-08-08 08:42:50 +0900] [210022] [INFO] Started server process [210022]
+[2024-08-08 08:42:50 +0900] [210021] [INFO] Started server process [210021]
+[2024-08-08 08:42:50 +0900] [210022] [INFO] Waiting for application startup.
+[2024-08-08 08:42:50 +0900] [210021] [INFO] Waiting for application startup.
+[2024-08-08 08:42:50 +0900] [210022] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-08 08:42:50 +0900] [210021] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-08 08:42:50 +0900] [210021] [INFO] Application startup complete.
+[2024-08-08 08:42:50 +0900] [210022] [INFO] Application startup complete.
+[2024-08-08 08:42:50 +0900] [210020] [INFO] Started server process [210020]
+[2024-08-08 08:42:50 +0900] [210020] [INFO] Waiting for application startup.
+[2024-08-08 08:42:50 +0900] [210020] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-08 08:42:50 +0900] [210020] [INFO] Application startup complete.
+[2024-08-08 08:42:50 +0900] [210024] [INFO] Started server process [210024]
+[2024-08-08 08:42:50 +0900] [210024] [INFO] Waiting for application startup.
+[2024-08-08 08:42:50 +0900] [210024] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-08 08:42:50 +0900] [210024] [INFO] Application startup complete.
+[2024-08-08 08:42:50 +0900] [210018] [INFO] Started server process [210018]
+[2024-08-08 08:42:50 +0900] [210018] [INFO] Waiting for application startup.
+[2024-08-08 08:42:50 +0900] [210018] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-08 08:42:50 +0900] [210018] [INFO] Application startup complete.
+[2024-08-08 08:42:50 +0900] [210023] [INFO] Started server process [210023]
+[2024-08-08 08:42:50 +0900] [210023] [INFO] Waiting for application startup.
+[2024-08-08 08:42:50 +0900] [210023] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-08 08:42:50 +0900] [210023] [INFO] Application startup complete.
+[2024-08-08 08:42:50 +0900] [210019] [INFO] Started server process [210019]
+[2024-08-08 08:42:50 +0900] [210019] [INFO] Waiting for application startup.
+[2024-08-08 08:42:50 +0900] [210019] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-08 08:42:50 +0900] [210019] [INFO] Application startup complete.
+[2024-08-08 08:42:50 +0900] [210015] [INFO] Started server process [210015]
+[2024-08-08 08:42:50 +0900] [210015] [INFO] Waiting for application startup.
+[2024-08-08 08:42:50 +0900] [210015] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-08 08:42:50 +0900] [210015] [INFO] Application startup complete.
+[2024-08-08 08:42:51 +0900] [210013] [INFO] Started server process [210013]
+[2024-08-08 08:42:51 +0900] [210013] [INFO] Waiting for application startup.
+[2024-08-08 08:42:51 +0900] [210013] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-08 08:42:51 +0900] [210013] [INFO] Application startup complete.
+[2024-08-08 08:42:51 +0900] [210014] [INFO] Started server process [210014]
+[2024-08-08 08:42:51 +0900] [210014] [INFO] Waiting for application startup.
+[2024-08-08 08:42:51 +0900] [210014] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-08 08:42:51 +0900] [210014] [INFO] Application startup complete.
+[2024-08-09 11:13:36 +0900] [210011] [INFO] Handling signal: term
+[2024-08-09 11:13:36 +0900] [210023] [INFO] Shutting down
+[2024-08-09 11:13:36 +0900] [210023] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-09 11:13:36 +0900] [210018] [INFO] Shutting down
+[2024-08-09 11:13:36 +0900] [210018] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-09 11:13:36 +0900] [210024] [INFO] Shutting down
+[2024-08-09 11:13:36 +0900] [210024] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-09 11:13:36 +0900] [210015] [INFO] Shutting down
+[2024-08-09 11:13:36 +0900] [210015] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-09 11:13:36 +0900] [210022] [INFO] Shutting down
+[2024-08-09 11:13:36 +0900] [210022] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-09 11:13:36 +0900] [210014] [INFO] Shutting down
+[2024-08-09 11:13:36 +0900] [210014] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-09 11:13:36 +0900] [210021] [INFO] Shutting down
+[2024-08-09 11:13:36 +0900] [210021] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-09 11:13:36 +0900] [210020] [INFO] Shutting down
+[2024-08-09 11:13:36 +0900] [210017] [INFO] Shutting down
+[2024-08-09 11:13:36 +0900] [210020] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-09 11:13:36 +0900] [210017] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-09 11:13:36 +0900] [210016] [INFO] Shutting down
+[2024-08-09 11:13:36 +0900] [210016] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-09 11:13:36 +0900] [210019] [INFO] Shutting down
+[2024-08-09 11:13:36 +0900] [210019] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-09 11:13:36 +0900] [210013] [INFO] Shutting down
+[2024-08-09 11:13:36 +0900] [210013] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-09 11:13:36 +0900] [210023] [INFO] Finished server process [210023]
+[2024-08-09 11:13:36 +0900] [210024] [INFO] Finished server process [210024]
+[2024-08-09 11:13:36 +0900] [210018] [INFO] Finished server process [210018]
+[2024-08-09 11:13:36 +0900] [210015] [INFO] Finished server process [210015]
+[2024-08-09 11:13:36 +0900] [210022] [INFO] Finished server process [210022]
+[2024-08-09 11:13:36 +0900] [210014] [INFO] Finished server process [210014]
+[2024-08-09 11:13:36 +0900] [210021] [INFO] Finished server process [210021]
+[2024-08-09 11:13:36 +0900] [210020] [INFO] Finished server process [210020]
+[2024-08-09 11:13:36 +0900] [210017] [INFO] Finished server process [210017]
+[2024-08-09 11:13:36 +0900] [210016] [INFO] Finished server process [210016]
+[2024-08-09 11:13:36 +0900] [210019] [INFO] Finished server process [210019]
+[2024-08-09 11:13:36 +0900] [210013] [INFO] Finished server process [210013]
+[2024-08-09 11:13:36 +0900] [210011] [ERROR] Worker (pid:210021) was sent SIGTERM!
+[2024-08-09 11:13:36 +0900] [210011] [ERROR] Worker (pid:210022) was sent SIGTERM!
+[2024-08-09 11:13:36 +0900] [210011] [ERROR] Worker (pid:210015) was sent SIGTERM!
+[2024-08-09 11:13:36 +0900] [210011] [ERROR] Worker (pid:210020) was sent SIGTERM!
+[2024-08-09 11:13:36 +0900] [210011] [ERROR] Worker (pid:210014) was sent SIGTERM!
+[2024-08-09 11:13:36 +0900] [210011] [ERROR] Worker (pid:210017) was sent SIGTERM!
+[2024-08-09 11:13:36 +0900] [210011] [ERROR] Worker (pid:210016) was sent SIGTERM!
+[2024-08-09 11:13:36 +0900] [210011] [ERROR] Worker (pid:210024) was sent SIGTERM!
+[2024-08-09 11:13:37 +0900] [210011] [ERROR] Worker (pid:210019) was sent SIGTERM!
+[2024-08-09 11:13:37 +0900] [210011] [ERROR] Worker (pid:210023) was sent SIGTERM!
+[2024-08-09 11:13:37 +0900] [210011] [ERROR] Worker (pid:210018) was sent SIGTERM!
+[2024-08-09 11:13:37 +0900] [210011] [ERROR] Worker (pid:210013) was sent SIGTERM!
+[2024-08-09 11:13:37 +0900] [210011] [INFO] Shutting down: Master
+[2024-08-09 15:19:11 +0900] [16219] [INFO] Starting gunicorn 22.0.0
+[2024-08-09 15:19:11 +0900] [16219] [INFO] Listening at: http://0.0.0.0:8001 (16219)
+[2024-08-09 15:19:11 +0900] [16219] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2024-08-09 15:19:11 +0900] [16221] [INFO] Booting worker with pid: 16221
+[2024-08-09 15:19:11 +0900] [16222] [INFO] Booting worker with pid: 16222
+[2024-08-09 15:19:11 +0900] [16226] [INFO] Booting worker with pid: 16226
+[2024-08-09 15:19:11 +0900] [16227] [INFO] Booting worker with pid: 16227
+[2024-08-09 15:19:11 +0900] [16228] [INFO] Booting worker with pid: 16228
+[2024-08-09 15:19:11 +0900] [16232] [INFO] Booting worker with pid: 16232
+[2024-08-09 15:19:11 +0900] [16233] [INFO] Booting worker with pid: 16233
+[2024-08-09 15:19:11 +0900] [16234] [INFO] Booting worker with pid: 16234
+[2024-08-09 15:19:11 +0900] [16235] [INFO] Booting worker with pid: 16235
+[2024-08-09 15:19:11 +0900] [16236] [INFO] Booting worker with pid: 16236
+[2024-08-09 15:19:11 +0900] [16237] [INFO] Booting worker with pid: 16237
+[2024-08-09 15:19:11 +0900] [16238] [INFO] Booting worker with pid: 16238
+[2024-08-09 15:19:28 +0900] [16236] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/home/pjtl2w01admin/btw/fast-api/main.py", line 8, in <module>
+    from models_api.embedding_api.routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/__init__.py", line 1, in <module>
+    from .routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/routes.py", line 4, in <module>
+    from .utils import BGE, MiniLM, KRsBert
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/utils.py", line 6, in <module>
+    embedding_model_bge = BGEM3FlagModel('BAAI/bge-m3', use_fp16=True, device='cuda:1')
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/FlagEmbedding/bge_m3.py", line 56, in __init__
+    self.model = self.model.to(self.device)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1173, in to
+    return self._apply(convert)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 804, in _apply
+    param_applied = fn(param)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1159, in convert
+    return t.to(
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/cuda/__init__.py", line 293, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: No CUDA GPUs are available
+[2024-08-09 15:19:28 +0900] [16236] [INFO] Worker exiting (pid: 16236)
+[2024-08-09 15:19:28 +0900] [16222] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/home/pjtl2w01admin/btw/fast-api/main.py", line 8, in <module>
+    from models_api.embedding_api.routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/__init__.py", line 1, in <module>
+    from .routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/routes.py", line 4, in <module>
+    from .utils import BGE, MiniLM, KRsBert
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/utils.py", line 6, in <module>
+    embedding_model_bge = BGEM3FlagModel('BAAI/bge-m3', use_fp16=True, device='cuda:1')
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/FlagEmbedding/bge_m3.py", line 56, in __init__
+    self.model = self.model.to(self.device)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1173, in to
+    return self._apply(convert)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 804, in _apply
+    param_applied = fn(param)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1159, in convert
+    return t.to(
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/cuda/__init__.py", line 293, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: No CUDA GPUs are available
+[2024-08-09 15:19:28 +0900] [16222] [INFO] Worker exiting (pid: 16222)
+[2024-08-09 15:19:28 +0900] [16221] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/home/pjtl2w01admin/btw/fast-api/main.py", line 8, in <module>
+    from models_api.embedding_api.routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/__init__.py", line 1, in <module>
+    from .routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/routes.py", line 4, in <module>
+    from .utils import BGE, MiniLM, KRsBert
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/utils.py", line 6, in <module>
+    embedding_model_bge = BGEM3FlagModel('BAAI/bge-m3', use_fp16=True, device='cuda:1')
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/FlagEmbedding/bge_m3.py", line 56, in __init__
+    self.model = self.model.to(self.device)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1173, in to
+    return self._apply(convert)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 804, in _apply
+    param_applied = fn(param)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1159, in convert
+    return t.to(
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/cuda/__init__.py", line 293, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: No CUDA GPUs are available
+[2024-08-09 15:19:28 +0900] [16221] [INFO] Worker exiting (pid: 16221)
+[2024-08-09 15:19:28 +0900] [16237] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/home/pjtl2w01admin/btw/fast-api/main.py", line 8, in <module>
+    from models_api.embedding_api.routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/__init__.py", line 1, in <module>
+    from .routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/routes.py", line 4, in <module>
+    from .utils import BGE, MiniLM, KRsBert
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/utils.py", line 6, in <module>
+    embedding_model_bge = BGEM3FlagModel('BAAI/bge-m3', use_fp16=True, device='cuda:1')
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/FlagEmbedding/bge_m3.py", line 56, in __init__
+    self.model = self.model.to(self.device)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1173, in to
+    return self._apply(convert)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 804, in _apply
+    param_applied = fn(param)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1159, in convert
+    return t.to(
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/cuda/__init__.py", line 293, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: No CUDA GPUs are available
+[2024-08-09 15:19:28 +0900] [16237] [INFO] Worker exiting (pid: 16237)
+[2024-08-09 15:19:28 +0900] [16238] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/home/pjtl2w01admin/btw/fast-api/main.py", line 8, in <module>
+    from models_api.embedding_api.routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/__init__.py", line 1, in <module>
+    from .routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/routes.py", line 4, in <module>
+    from .utils import BGE, MiniLM, KRsBert
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/utils.py", line 6, in <module>
+    embedding_model_bge = BGEM3FlagModel('BAAI/bge-m3', use_fp16=True, device='cuda:1')
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/FlagEmbedding/bge_m3.py", line 56, in __init__
+    self.model = self.model.to(self.device)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1173, in to
+    return self._apply(convert)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 804, in _apply
+    param_applied = fn(param)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1159, in convert
+    return t.to(
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/cuda/__init__.py", line 293, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: No CUDA GPUs are available
+[2024-08-09 15:19:28 +0900] [16238] [INFO] Worker exiting (pid: 16238)
+[2024-08-09 15:19:28 +0900] [16234] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/home/pjtl2w01admin/btw/fast-api/main.py", line 8, in <module>
+    from models_api.embedding_api.routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/__init__.py", line 1, in <module>
+    from .routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/routes.py", line 4, in <module>
+    from .utils import BGE, MiniLM, KRsBert
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/utils.py", line 6, in <module>
+    embedding_model_bge = BGEM3FlagModel('BAAI/bge-m3', use_fp16=True, device='cuda:1')
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/FlagEmbedding/bge_m3.py", line 56, in __init__
+    self.model = self.model.to(self.device)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1173, in to
+    return self._apply(convert)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 804, in _apply
+    param_applied = fn(param)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1159, in convert
+    return t.to(
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/cuda/__init__.py", line 293, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: No CUDA GPUs are available
+[2024-08-09 15:19:28 +0900] [16234] [INFO] Worker exiting (pid: 16234)
+[2024-08-09 15:19:28 +0900] [16233] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/home/pjtl2w01admin/btw/fast-api/main.py", line 8, in <module>
+    from models_api.embedding_api.routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/__init__.py", line 1, in <module>
+    from .routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/routes.py", line 4, in <module>
+    from .utils import BGE, MiniLM, KRsBert
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/utils.py", line 6, in <module>
+    embedding_model_bge = BGEM3FlagModel('BAAI/bge-m3', use_fp16=True, device='cuda:1')
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/FlagEmbedding/bge_m3.py", line 56, in __init__
+    self.model = self.model.to(self.device)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1173, in to
+    return self._apply(convert)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 804, in _apply
+    param_applied = fn(param)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1159, in convert
+    return t.to(
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/cuda/__init__.py", line 293, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: No CUDA GPUs are available
+[2024-08-09 15:19:28 +0900] [16233] [INFO] Worker exiting (pid: 16233)
+[2024-08-09 15:19:28 +0900] [16235] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/home/pjtl2w01admin/btw/fast-api/main.py", line 8, in <module>
+    from models_api.embedding_api.routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/__init__.py", line 1, in <module>
+    from .routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/routes.py", line 4, in <module>
+    from .utils import BGE, MiniLM, KRsBert
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/utils.py", line 6, in <module>
+    embedding_model_bge = BGEM3FlagModel('BAAI/bge-m3', use_fp16=True, device='cuda:1')
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/FlagEmbedding/bge_m3.py", line 56, in __init__
+    self.model = self.model.to(self.device)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1173, in to
+    return self._apply(convert)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 804, in _apply
+    param_applied = fn(param)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1159, in convert
+    return t.to(
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/cuda/__init__.py", line 293, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: No CUDA GPUs are available
+[2024-08-09 15:19:28 +0900] [16235] [INFO] Worker exiting (pid: 16235)
+[2024-08-09 15:19:29 +0900] [16226] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/home/pjtl2w01admin/btw/fast-api/main.py", line 8, in <module>
+    from models_api.embedding_api.routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/__init__.py", line 1, in <module>
+    from .routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/routes.py", line 4, in <module>
+    from .utils import BGE, MiniLM, KRsBert
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/utils.py", line 6, in <module>
+    embedding_model_bge = BGEM3FlagModel('BAAI/bge-m3', use_fp16=True, device='cuda:1')
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/FlagEmbedding/bge_m3.py", line 56, in __init__
+    self.model = self.model.to(self.device)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1173, in to
+    return self._apply(convert)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 804, in _apply
+    param_applied = fn(param)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1159, in convert
+    return t.to(
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/cuda/__init__.py", line 293, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: No CUDA GPUs are available
+[2024-08-09 15:19:29 +0900] [16226] [INFO] Worker exiting (pid: 16226)
+[2024-08-09 15:19:29 +0900] [16227] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/home/pjtl2w01admin/btw/fast-api/main.py", line 8, in <module>
+    from models_api.embedding_api.routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/__init__.py", line 1, in <module>
+    from .routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/routes.py", line 4, in <module>
+    from .utils import BGE, MiniLM, KRsBert
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/utils.py", line 6, in <module>
+    embedding_model_bge = BGEM3FlagModel('BAAI/bge-m3', use_fp16=True, device='cuda:1')
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/FlagEmbedding/bge_m3.py", line 56, in __init__
+    self.model = self.model.to(self.device)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1173, in to
+    return self._apply(convert)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 804, in _apply
+    param_applied = fn(param)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1159, in convert
+    return t.to(
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/cuda/__init__.py", line 293, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: No CUDA GPUs are available
+[2024-08-09 15:19:29 +0900] [16227] [INFO] Worker exiting (pid: 16227)
+[2024-08-09 15:19:29 +0900] [16219] [ERROR] Worker (pid:16236) exited with code 3
+[2024-08-09 15:19:29 +0900] [16219] [ERROR] Worker (pid:16234) was sent SIGTERM!
+[2024-08-09 15:19:29 +0900] [16219] [ERROR] Worker (pid:16226) was sent SIGTERM!
+[2024-08-09 15:19:29 +0900] [16219] [ERROR] Worker (pid:16222) was sent SIGTERM!
+[2024-08-09 15:19:29 +0900] [16219] [ERROR] Worker (pid:16233) was sent SIGTERM!
+[2024-08-09 15:19:29 +0900] [16219] [ERROR] Worker (pid:16237) was sent SIGTERM!
+[2024-08-09 15:19:29 +0900] [16219] [ERROR] Worker (pid:16221) was sent SIGTERM!
+[2024-08-09 15:19:29 +0900] [16219] [ERROR] Worker (pid:16238) was sent SIGTERM!
+[2024-08-09 15:19:29 +0900] [16219] [ERROR] Worker (pid:16235) was sent SIGTERM!
+[2024-08-09 15:19:29 +0900] [16219] [ERROR] Worker (pid:16227) was sent SIGTERM!
+[2024-08-09 15:19:30 +0900] [16219] [ERROR] Worker (pid:16228) was sent SIGTERM!
+[2024-08-09 15:19:30 +0900] [16219] [ERROR] Worker (pid:16232) was sent SIGTERM!
+[2024-08-09 15:19:30 +0900] [16219] [ERROR] Shutting down: Master
+[2024-08-09 15:19:30 +0900] [16219] [ERROR] Reason: Worker failed to boot.
+[2024-08-09 15:24:21 +0900] [20892] [INFO] Starting gunicorn 22.0.0
+[2024-08-09 15:24:21 +0900] [20892] [INFO] Listening at: http://0.0.0.0:8001 (20892)
+[2024-08-09 15:24:21 +0900] [20892] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2024-08-09 15:24:21 +0900] [20897] [INFO] Booting worker with pid: 20897
+[2024-08-09 15:24:21 +0900] [20898] [INFO] Booting worker with pid: 20898
+[2024-08-09 15:24:21 +0900] [20902] [INFO] Booting worker with pid: 20902
+[2024-08-09 15:24:22 +0900] [20903] [INFO] Booting worker with pid: 20903
+[2024-08-09 15:24:22 +0900] [20904] [INFO] Booting worker with pid: 20904
+[2024-08-09 15:24:22 +0900] [20908] [INFO] Booting worker with pid: 20908
+[2024-08-09 15:24:22 +0900] [20909] [INFO] Booting worker with pid: 20909
+[2024-08-09 15:24:22 +0900] [20910] [INFO] Booting worker with pid: 20910
+[2024-08-09 15:24:22 +0900] [20911] [INFO] Booting worker with pid: 20911
+[2024-08-09 15:24:22 +0900] [20912] [INFO] Booting worker with pid: 20912
+[2024-08-09 15:24:22 +0900] [20913] [INFO] Booting worker with pid: 20913
+[2024-08-09 15:24:22 +0900] [20914] [INFO] Booting worker with pid: 20914
+[2024-08-09 15:24:35 +0900] [20902] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/home/pjtl2w01admin/btw/fast-api/main.py", line 8, in <module>
+    from models_api.embedding_api.routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/__init__.py", line 1, in <module>
+    from .routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/routes.py", line 4, in <module>
+    from .utils import BGE, MiniLM, KRsBert
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/utils.py", line 6, in <module>
+    embedding_model_bge = BGEM3FlagModel('BAAI/bge-m3', use_fp16=True, device='cuda:1')
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/FlagEmbedding/bge_m3.py", line 56, in __init__
+    self.model = self.model.to(self.device)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1173, in to
+    return self._apply(convert)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 804, in _apply
+    param_applied = fn(param)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1159, in convert
+    return t.to(
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/cuda/__init__.py", line 293, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: No CUDA GPUs are available
+[2024-08-09 15:24:35 +0900] [20902] [INFO] Worker exiting (pid: 20902)
+[2024-08-09 15:24:35 +0900] [20909] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/home/pjtl2w01admin/btw/fast-api/main.py", line 8, in <module>
+    from models_api.embedding_api.routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/__init__.py", line 1, in <module>
+    from .routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/routes.py", line 4, in <module>
+    from .utils import BGE, MiniLM, KRsBert
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/utils.py", line 6, in <module>
+    embedding_model_bge = BGEM3FlagModel('BAAI/bge-m3', use_fp16=True, device='cuda:1')
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/FlagEmbedding/bge_m3.py", line 56, in __init__
+    self.model = self.model.to(self.device)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1173, in to
+    return self._apply(convert)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 804, in _apply
+    param_applied = fn(param)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1159, in convert
+    return t.to(
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/cuda/__init__.py", line 293, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: No CUDA GPUs are available
+[2024-08-09 15:24:35 +0900] [20909] [INFO] Worker exiting (pid: 20909)
+[2024-08-09 15:24:36 +0900] [20911] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/home/pjtl2w01admin/btw/fast-api/main.py", line 8, in <module>
+    from models_api.embedding_api.routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/__init__.py", line 1, in <module>
+    from .routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/routes.py", line 4, in <module>
+    from .utils import BGE, MiniLM, KRsBert
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/utils.py", line 6, in <module>
+    embedding_model_bge = BGEM3FlagModel('BAAI/bge-m3', use_fp16=True, device='cuda:1')
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/FlagEmbedding/bge_m3.py", line 56, in __init__
+    self.model = self.model.to(self.device)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1173, in to
+    return self._apply(convert)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 804, in _apply
+    param_applied = fn(param)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1159, in convert
+    return t.to(
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/cuda/__init__.py", line 293, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: No CUDA GPUs are available
+[2024-08-09 15:24:36 +0900] [20911] [INFO] Worker exiting (pid: 20911)
+[2024-08-09 15:24:36 +0900] [20913] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/home/pjtl2w01admin/btw/fast-api/main.py", line 8, in <module>
+    from models_api.embedding_api.routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/__init__.py", line 1, in <module>
+    from .routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/routes.py", line 4, in <module>
+    from .utils import BGE, MiniLM, KRsBert
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/utils.py", line 6, in <module>
+    embedding_model_bge = BGEM3FlagModel('BAAI/bge-m3', use_fp16=True, device='cuda:1')
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/FlagEmbedding/bge_m3.py", line 56, in __init__
+    self.model = self.model.to(self.device)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1173, in to
+    return self._apply(convert)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 804, in _apply
+    param_applied = fn(param)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1159, in convert
+    return t.to(
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/cuda/__init__.py", line 293, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: No CUDA GPUs are available
+[2024-08-09 15:24:36 +0900] [20913] [INFO] Worker exiting (pid: 20913)
+[2024-08-09 15:24:36 +0900] [20898] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/home/pjtl2w01admin/btw/fast-api/main.py", line 8, in <module>
+    from models_api.embedding_api.routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/__init__.py", line 1, in <module>
+    from .routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/routes.py", line 4, in <module>
+    from .utils import BGE, MiniLM, KRsBert
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/utils.py", line 6, in <module>
+    embedding_model_bge = BGEM3FlagModel('BAAI/bge-m3', use_fp16=True, device='cuda:1')
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/FlagEmbedding/bge_m3.py", line 56, in __init__
+    self.model = self.model.to(self.device)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1173, in to
+    return self._apply(convert)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 804, in _apply
+    param_applied = fn(param)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1159, in convert
+    return t.to(
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/cuda/__init__.py", line 293, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: No CUDA GPUs are available
+[2024-08-09 15:24:36 +0900] [20898] [INFO] Worker exiting (pid: 20898)
+[2024-08-09 15:24:36 +0900] [20914] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/home/pjtl2w01admin/btw/fast-api/main.py", line 8, in <module>
+    from models_api.embedding_api.routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/__init__.py", line 1, in <module>
+    from .routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/routes.py", line 4, in <module>
+    from .utils import BGE, MiniLM, KRsBert
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/utils.py", line 6, in <module>
+    embedding_model_bge = BGEM3FlagModel('BAAI/bge-m3', use_fp16=True, device='cuda:1')
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/FlagEmbedding/bge_m3.py", line 56, in __init__
+    self.model = self.model.to(self.device)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1173, in to
+    return self._apply(convert)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 804, in _apply
+    param_applied = fn(param)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1159, in convert
+    return t.to(
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/cuda/__init__.py", line 293, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: No CUDA GPUs are available
+[2024-08-09 15:24:36 +0900] [20914] [INFO] Worker exiting (pid: 20914)
+[2024-08-09 15:24:36 +0900] [20903] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/home/pjtl2w01admin/btw/fast-api/main.py", line 8, in <module>
+    from models_api.embedding_api.routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/__init__.py", line 1, in <module>
+    from .routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/routes.py", line 4, in <module>
+    from .utils import BGE, MiniLM, KRsBert
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/utils.py", line 6, in <module>
+    embedding_model_bge = BGEM3FlagModel('BAAI/bge-m3', use_fp16=True, device='cuda:1')
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/FlagEmbedding/bge_m3.py", line 56, in __init__
+    self.model = self.model.to(self.device)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1173, in to
+    return self._apply(convert)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 804, in _apply
+    param_applied = fn(param)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1159, in convert
+    return t.to(
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/cuda/__init__.py", line 293, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: No CUDA GPUs are available
+[2024-08-09 15:24:36 +0900] [20903] [INFO] Worker exiting (pid: 20903)
+[2024-08-09 15:24:36 +0900] [20897] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/home/pjtl2w01admin/btw/fast-api/main.py", line 8, in <module>
+    from models_api.embedding_api.routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/__init__.py", line 1, in <module>
+    from .routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/routes.py", line 4, in <module>
+    from .utils import BGE, MiniLM, KRsBert
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/utils.py", line 6, in <module>
+    embedding_model_bge = BGEM3FlagModel('BAAI/bge-m3', use_fp16=True, device='cuda:1')
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/FlagEmbedding/bge_m3.py", line 56, in __init__
+    self.model = self.model.to(self.device)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1173, in to
+    return self._apply(convert)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 804, in _apply
+    param_applied = fn(param)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1159, in convert
+    return t.to(
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/cuda/__init__.py", line 293, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: No CUDA GPUs are available
+[2024-08-09 15:24:36 +0900] [20897] [INFO] Worker exiting (pid: 20897)
+[2024-08-09 15:24:37 +0900] [20910] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/home/pjtl2w01admin/btw/fast-api/main.py", line 8, in <module>
+    from models_api.embedding_api.routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/__init__.py", line 1, in <module>
+    from .routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/routes.py", line 4, in <module>
+    from .utils import BGE, MiniLM, KRsBert
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/utils.py", line 6, in <module>
+    embedding_model_bge = BGEM3FlagModel('BAAI/bge-m3', use_fp16=True, device='cuda:1')
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/FlagEmbedding/bge_m3.py", line 56, in __init__
+    self.model = self.model.to(self.device)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1173, in to
+    return self._apply(convert)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 804, in _apply
+    param_applied = fn(param)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1159, in convert
+    return t.to(
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/cuda/__init__.py", line 293, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: No CUDA GPUs are available
+[2024-08-09 15:24:37 +0900] [20910] [INFO] Worker exiting (pid: 20910)
+[2024-08-09 15:24:37 +0900] [20892] [ERROR] Worker (pid:20913) exited with code 3
+[2024-08-09 15:24:37 +0900] [20892] [ERROR] Worker (pid:20911) was sent SIGTERM!
+[2024-08-09 15:24:37 +0900] [20892] [ERROR] Worker (pid:20910) was sent SIGTERM!
+[2024-08-09 15:24:37 +0900] [20892] [ERROR] Worker (pid:20898) was sent SIGTERM!
+[2024-08-09 15:24:37 +0900] [20892] [ERROR] Worker (pid:20903) was sent SIGTERM!
+[2024-08-09 15:24:37 +0900] [20892] [ERROR] Worker (pid:20902) was sent SIGTERM!
+[2024-08-09 15:24:37 +0900] [20892] [ERROR] Worker (pid:20914) was sent SIGTERM!
+[2024-08-09 15:24:37 +0900] [20892] [ERROR] Worker (pid:20909) was sent SIGTERM!
+[2024-08-09 15:24:37 +0900] [20892] [ERROR] Worker (pid:20897) was sent SIGTERM!
+[2024-08-09 15:24:37 +0900] [20892] [ERROR] Worker (pid:20908) was sent SIGTERM!
+[2024-08-09 15:24:37 +0900] [20892] [ERROR] Worker (pid:20904) was sent SIGTERM!
+[2024-08-09 15:24:37 +0900] [20892] [ERROR] Worker (pid:20912) was sent SIGTERM!
+[2024-08-09 15:24:37 +0900] [20892] [ERROR] Shutting down: Master
+[2024-08-09 15:24:37 +0900] [20892] [ERROR] Reason: Worker failed to boot.
+[2024-08-09 15:24:43 +0900] [22683] [INFO] Starting gunicorn 22.0.0
+[2024-08-09 15:24:43 +0900] [22683] [INFO] Listening at: http://0.0.0.0:8001 (22683)
+[2024-08-09 15:24:43 +0900] [22683] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2024-08-09 15:24:43 +0900] [22685] [INFO] Booting worker with pid: 22685
+[2024-08-09 15:24:43 +0900] [22686] [INFO] Booting worker with pid: 22686
+[2024-08-09 15:24:43 +0900] [22687] [INFO] Booting worker with pid: 22687
+[2024-08-09 15:24:43 +0900] [22688] [INFO] Booting worker with pid: 22688
+[2024-08-09 15:24:43 +0900] [22692] [INFO] Booting worker with pid: 22692
+[2024-08-09 15:24:43 +0900] [22693] [INFO] Booting worker with pid: 22693
+[2024-08-09 15:24:43 +0900] [22697] [INFO] Booting worker with pid: 22697
+[2024-08-09 15:24:43 +0900] [22698] [INFO] Booting worker with pid: 22698
+[2024-08-09 15:24:43 +0900] [22699] [INFO] Booting worker with pid: 22699
+[2024-08-09 15:24:43 +0900] [22700] [INFO] Booting worker with pid: 22700
+[2024-08-09 15:24:43 +0900] [22701] [INFO] Booting worker with pid: 22701
+[2024-08-09 15:24:44 +0900] [22702] [INFO] Booting worker with pid: 22702
+[2024-08-09 15:24:56 +0900] [22699] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/home/pjtl2w01admin/btw/fast-api/main.py", line 8, in <module>
+    from models_api.embedding_api.routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/__init__.py", line 1, in <module>
+    from .routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/routes.py", line 4, in <module>
+    from .utils import BGE, MiniLM, KRsBert
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/utils.py", line 6, in <module>
+    embedding_model_bge = BGEM3FlagModel('BAAI/bge-m3', use_fp16=True, device='cuda:1')
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/FlagEmbedding/bge_m3.py", line 56, in __init__
+    self.model = self.model.to(self.device)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1173, in to
+    return self._apply(convert)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 804, in _apply
+    param_applied = fn(param)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1159, in convert
+    return t.to(
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/cuda/__init__.py", line 293, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: No CUDA GPUs are available
+[2024-08-09 15:24:56 +0900] [22699] [INFO] Worker exiting (pid: 22699)
+[2024-08-09 15:24:56 +0900] [22698] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/home/pjtl2w01admin/btw/fast-api/main.py", line 8, in <module>
+    from models_api.embedding_api.routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/__init__.py", line 1, in <module>
+    from .routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/routes.py", line 4, in <module>
+    from .utils import BGE, MiniLM, KRsBert
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/utils.py", line 6, in <module>
+    embedding_model_bge = BGEM3FlagModel('BAAI/bge-m3', use_fp16=True, device='cuda:1')
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/FlagEmbedding/bge_m3.py", line 56, in __init__
+    self.model = self.model.to(self.device)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1173, in to
+    return self._apply(convert)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 804, in _apply
+    param_applied = fn(param)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1159, in convert
+    return t.to(
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/cuda/__init__.py", line 293, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: No CUDA GPUs are available
+[2024-08-09 15:24:56 +0900] [22698] [INFO] Worker exiting (pid: 22698)
+[2024-08-09 15:24:57 +0900] [22685] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/home/pjtl2w01admin/btw/fast-api/main.py", line 8, in <module>
+    from models_api.embedding_api.routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/__init__.py", line 1, in <module>
+    from .routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/routes.py", line 4, in <module>
+    from .utils import BGE, MiniLM, KRsBert
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/utils.py", line 6, in <module>
+    embedding_model_bge = BGEM3FlagModel('BAAI/bge-m3', use_fp16=True, device='cuda:1')
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/FlagEmbedding/bge_m3.py", line 56, in __init__
+    self.model = self.model.to(self.device)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1173, in to
+    return self._apply(convert)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 804, in _apply
+    param_applied = fn(param)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1159, in convert
+    return t.to(
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/cuda/__init__.py", line 293, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: No CUDA GPUs are available
+[2024-08-09 15:24:57 +0900] [22688] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/home/pjtl2w01admin/btw/fast-api/main.py", line 8, in <module>
+    from models_api.embedding_api.routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/__init__.py", line 1, in <module>
+    from .routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/routes.py", line 4, in <module>
+    from .utils import BGE, MiniLM, KRsBert
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/utils.py", line 6, in <module>
+    embedding_model_bge = BGEM3FlagModel('BAAI/bge-m3', use_fp16=True, device='cuda:1')
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/FlagEmbedding/bge_m3.py", line 56, in __init__
+    self.model = self.model.to(self.device)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1173, in to
+    return self._apply(convert)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 804, in _apply
+    param_applied = fn(param)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1159, in convert
+    return t.to(
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/cuda/__init__.py", line 293, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: No CUDA GPUs are available
+[2024-08-09 15:24:57 +0900] [22685] [INFO] Worker exiting (pid: 22685)
+[2024-08-09 15:24:57 +0900] [22688] [INFO] Worker exiting (pid: 22688)
+[2024-08-09 15:24:57 +0900] [22701] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/home/pjtl2w01admin/btw/fast-api/main.py", line 8, in <module>
+    from models_api.embedding_api.routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/__init__.py", line 1, in <module>
+    from .routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/routes.py", line 4, in <module>
+    from .utils import BGE, MiniLM, KRsBert
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/utils.py", line 6, in <module>
+    embedding_model_bge = BGEM3FlagModel('BAAI/bge-m3', use_fp16=True, device='cuda:1')
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/FlagEmbedding/bge_m3.py", line 56, in __init__
+    self.model = self.model.to(self.device)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1173, in to
+    return self._apply(convert)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 804, in _apply
+    param_applied = fn(param)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1159, in convert
+    return t.to(
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/cuda/__init__.py", line 293, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: No CUDA GPUs are available
+[2024-08-09 15:24:57 +0900] [22701] [INFO] Worker exiting (pid: 22701)
+[2024-08-09 15:24:58 +0900] [22700] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/home/pjtl2w01admin/btw/fast-api/main.py", line 8, in <module>
+    from models_api.embedding_api.routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/__init__.py", line 1, in <module>
+    from .routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/routes.py", line 4, in <module>
+    from .utils import BGE, MiniLM, KRsBert
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/utils.py", line 6, in <module>
+    embedding_model_bge = BGEM3FlagModel('BAAI/bge-m3', use_fp16=True, device='cuda:1')
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/FlagEmbedding/bge_m3.py", line 56, in __init__
+    self.model = self.model.to(self.device)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1173, in to
+    return self._apply(convert)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 804, in _apply
+    param_applied = fn(param)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1159, in convert
+    return t.to(
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/cuda/__init__.py", line 293, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: No CUDA GPUs are available
+[2024-08-09 15:24:58 +0900] [22700] [INFO] Worker exiting (pid: 22700)
+[2024-08-09 15:24:58 +0900] [22697] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/home/pjtl2w01admin/btw/fast-api/main.py", line 8, in <module>
+    from models_api.embedding_api.routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/__init__.py", line 1, in <module>
+    from .routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/routes.py", line 4, in <module>
+    from .utils import BGE, MiniLM, KRsBert
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/utils.py", line 6, in <module>
+    embedding_model_bge = BGEM3FlagModel('BAAI/bge-m3', use_fp16=True, device='cuda:1')
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/FlagEmbedding/bge_m3.py", line 56, in __init__
+    self.model = self.model.to(self.device)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1173, in to
+    return self._apply(convert)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 804, in _apply
+    param_applied = fn(param)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1159, in convert
+    return t.to(
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/cuda/__init__.py", line 293, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: No CUDA GPUs are available
+[2024-08-09 15:24:58 +0900] [22697] [INFO] Worker exiting (pid: 22697)
+[2024-08-09 15:24:58 +0900] [22687] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/home/pjtl2w01admin/btw/fast-api/main.py", line 8, in <module>
+    from models_api.embedding_api.routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/__init__.py", line 1, in <module>
+    from .routes import embedding_router
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/routes.py", line 4, in <module>
+    from .utils import BGE, MiniLM, KRsBert
+  File "/home/pjtl2w01admin/btw/fast-api/models_api/embedding_api/utils.py", line 6, in <module>
+    embedding_model_bge = BGEM3FlagModel('BAAI/bge-m3', use_fp16=True, device='cuda:1')
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/FlagEmbedding/bge_m3.py", line 56, in __init__
+    self.model = self.model.to(self.device)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1173, in to
+    return self._apply(convert)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 804, in _apply
+    param_applied = fn(param)
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1159, in convert
+    return t.to(
+  File "/home/pjtl2w01admin/anaconda3/envs/api/lib/python3.9/site-packages/torch/cuda/__init__.py", line 293, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: No CUDA GPUs are available
+[2024-08-09 15:24:58 +0900] [22687] [INFO] Worker exiting (pid: 22687)
+[2024-08-09 15:24:58 +0900] [22683] [ERROR] Worker (pid:22688) exited with code 3
+[2024-08-09 15:24:58 +0900] [22683] [ERROR] Worker (pid:22697) was sent SIGTERM!
+[2024-08-09 15:24:58 +0900] [22683] [ERROR] Worker (pid:22687) was sent SIGTERM!
+[2024-08-09 15:24:58 +0900] [22683] [ERROR] Worker (pid:22701) was sent SIGTERM!
+[2024-08-09 15:24:58 +0900] [22683] [ERROR] Worker (pid:22685) was sent SIGTERM!
+[2024-08-09 15:24:58 +0900] [22683] [ERROR] Worker (pid:22698) was sent SIGTERM!
+[2024-08-09 15:24:58 +0900] [22683] [ERROR] Worker (pid:22700) was sent SIGTERM!
+[2024-08-09 15:24:58 +0900] [22683] [ERROR] Worker (pid:22699) was sent SIGTERM!
+[2024-08-09 15:24:58 +0900] [22683] [ERROR] Worker (pid:22692) was sent SIGTERM!
+[2024-08-09 15:24:58 +0900] [22683] [ERROR] Worker (pid:22686) was sent SIGTERM!
+[2024-08-09 15:24:58 +0900] [22683] [ERROR] Worker (pid:22702) was sent SIGTERM!
+[2024-08-09 15:24:58 +0900] [22683] [ERROR] Worker (pid:22693) was sent SIGTERM!
+[2024-08-09 15:24:58 +0900] [22683] [ERROR] Shutting down: Master
+[2024-08-09 15:24:58 +0900] [22683] [ERROR] Reason: Worker failed to boot.
+[2024-08-09 15:31:23 +0900] [41652] [INFO] Starting gunicorn 22.0.0
+[2024-08-09 15:31:23 +0900] [41652] [INFO] Listening at: http://0.0.0.0:8001 (41652)
+[2024-08-09 15:31:23 +0900] [41652] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2024-08-09 15:31:23 +0900] [41654] [INFO] Booting worker with pid: 41654
+[2024-08-09 15:31:23 +0900] [41655] [INFO] Booting worker with pid: 41655
+[2024-08-09 15:31:23 +0900] [41656] [INFO] Booting worker with pid: 41656
+[2024-08-09 15:31:23 +0900] [41657] [INFO] Booting worker with pid: 41657
+[2024-08-09 15:31:23 +0900] [41658] [INFO] Booting worker with pid: 41658
+[2024-08-09 15:31:23 +0900] [41659] [INFO] Booting worker with pid: 41659
+[2024-08-09 15:31:24 +0900] [41660] [INFO] Booting worker with pid: 41660
+[2024-08-09 15:31:24 +0900] [41661] [INFO] Booting worker with pid: 41661
+[2024-08-09 15:31:24 +0900] [41662] [INFO] Booting worker with pid: 41662
+[2024-08-09 15:31:24 +0900] [41663] [INFO] Booting worker with pid: 41663
+[2024-08-09 15:31:24 +0900] [41664] [INFO] Booting worker with pid: 41664
+[2024-08-09 15:31:24 +0900] [41665] [INFO] Booting worker with pid: 41665
+[2024-08-09 15:31:31 +0900] [41660] [INFO] Started server process [41660]
+[2024-08-09 15:31:31 +0900] [41664] [INFO] Started server process [41664]
+[2024-08-09 15:31:31 +0900] [41665] [INFO] Started server process [41665]
+[2024-08-09 15:31:31 +0900] [41654] [INFO] Started server process [41654]
+[2024-08-09 15:31:31 +0900] [41656] [INFO] Started server process [41656]
+[2024-08-09 15:31:31 +0900] [41662] [INFO] Started server process [41662]
+[2024-08-09 15:31:31 +0900] [41655] [INFO] Started server process [41655]
+[2024-08-09 15:31:31 +0900] [41660] [INFO] Waiting for application startup.
+[2024-08-09 15:31:31 +0900] [41664] [INFO] Waiting for application startup.
+[2024-08-09 15:31:31 +0900] [41665] [INFO] Waiting for application startup.
+[2024-08-09 15:31:31 +0900] [41654] [INFO] Waiting for application startup.
+[2024-08-09 15:31:31 +0900] [41656] [INFO] Waiting for application startup.
+[2024-08-09 15:31:31 +0900] [41662] [INFO] Waiting for application startup.
+[2024-08-09 15:31:31 +0900] [41655] [INFO] Waiting for application startup.
+[2024-08-09 15:31:31 +0900] [41660] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-09 15:31:31 +0900] [41665] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-09 15:31:31 +0900] [41664] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-09 15:31:31 +0900] [41656] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-09 15:31:31 +0900] [41662] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-09 15:31:31 +0900] [41654] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-09 15:31:31 +0900] [41655] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-09 15:31:31 +0900] [41660] [INFO] Application startup complete.
+[2024-08-09 15:31:31 +0900] [41665] [INFO] Application startup complete.
+[2024-08-09 15:31:31 +0900] [41664] [INFO] Application startup complete.
+[2024-08-09 15:31:31 +0900] [41656] [INFO] Application startup complete.
+[2024-08-09 15:31:31 +0900] [41662] [INFO] Application startup complete.
+[2024-08-09 15:31:31 +0900] [41654] [INFO] Application startup complete.
+[2024-08-09 15:31:31 +0900] [41655] [INFO] Application startup complete.
+[2024-08-09 15:31:31 +0900] [41661] [INFO] Started server process [41661]
+[2024-08-09 15:31:31 +0900] [41661] [INFO] Waiting for application startup.
+[2024-08-09 15:31:31 +0900] [41661] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-09 15:31:31 +0900] [41661] [INFO] Application startup complete.
+[2024-08-09 15:31:32 +0900] [41657] [INFO] Started server process [41657]
+[2024-08-09 15:31:32 +0900] [41663] [INFO] Started server process [41663]
+[2024-08-09 15:31:32 +0900] [41657] [INFO] Waiting for application startup.
+[2024-08-09 15:31:32 +0900] [41663] [INFO] Waiting for application startup.
+[2024-08-09 15:31:32 +0900] [41657] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-09 15:31:32 +0900] [41663] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-09 15:31:32 +0900] [41657] [INFO] Application startup complete.
+[2024-08-09 15:31:32 +0900] [41663] [INFO] Application startup complete.
+[2024-08-09 15:31:32 +0900] [41658] [INFO] Started server process [41658]
+[2024-08-09 15:31:32 +0900] [41658] [INFO] Waiting for application startup.
+[2024-08-09 15:31:32 +0900] [41658] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-09 15:31:32 +0900] [41658] [INFO] Application startup complete.
+[2024-08-09 15:31:32 +0900] [41659] [INFO] Started server process [41659]
+[2024-08-09 15:31:32 +0900] [41659] [INFO] Waiting for application startup.
+[2024-08-09 15:31:32 +0900] [41659] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-09 15:31:32 +0900] [41659] [INFO] Application startup complete.
+[2024-08-09 16:35:54 +0900] [41652] [INFO] Handling signal: term
+[2024-08-09 16:35:54 +0900] [41652] [ERROR] Worker (pid:41662) was sent SIGHUP!
+[2024-08-09 16:35:54 +0900] [41652] [ERROR] Worker (pid:41655) was sent SIGHUP!
+[2024-08-09 16:35:54 +0900] [41652] [ERROR] Worker (pid:41657) was sent SIGHUP!
+[2024-08-09 16:35:54 +0900] [41652] [ERROR] Worker (pid:41654) was sent SIGHUP!
+[2024-08-09 16:35:54 +0900] [41652] [ERROR] Worker (pid:41660) was sent SIGHUP!
+[2024-08-09 16:35:54 +0900] [41652] [ERROR] Worker (pid:41663) was sent SIGHUP!
+[2024-08-09 16:35:54 +0900] [41652] [ERROR] Worker (pid:41658) was sent SIGHUP!
+[2024-08-09 16:35:54 +0900] [41652] [ERROR] Worker (pid:41661) was sent SIGHUP!
+[2024-08-09 16:35:54 +0900] [41652] [ERROR] Worker (pid:41664) was sent SIGHUP!
+[2024-08-09 16:35:54 +0900] [41652] [ERROR] Worker (pid:41665) was sent SIGHUP!
+[2024-08-09 16:35:54 +0900] [41652] [ERROR] Worker (pid:41659) was sent SIGHUP!
+[2024-08-09 16:35:54 +0900] [41652] [ERROR] Worker (pid:41656) was sent SIGHUP!
+[2024-08-09 16:35:54 +0900] [41652] [INFO] Shutting down: Master
+[2024-08-09 17:07:45 +0900] [5020] [INFO] Starting gunicorn 22.0.0
+[2024-08-09 17:07:45 +0900] [5020] [INFO] Listening at: http://0.0.0.0:8001 (5020)
+[2024-08-09 17:07:45 +0900] [5020] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2024-08-09 17:07:45 +0900] [5022] [INFO] Booting worker with pid: 5022
+[2024-08-09 17:07:45 +0900] [5023] [INFO] Booting worker with pid: 5023
+[2024-08-09 17:07:45 +0900] [5024] [INFO] Booting worker with pid: 5024
+[2024-08-09 17:07:45 +0900] [5025] [INFO] Booting worker with pid: 5025
+[2024-08-09 17:07:46 +0900] [5026] [INFO] Booting worker with pid: 5026
+[2024-08-09 17:07:46 +0900] [5027] [INFO] Booting worker with pid: 5027
+[2024-08-09 17:07:46 +0900] [5028] [INFO] Booting worker with pid: 5028
+[2024-08-09 17:07:46 +0900] [5029] [INFO] Booting worker with pid: 5029
+[2024-08-09 17:07:46 +0900] [5030] [INFO] Booting worker with pid: 5030
+[2024-08-09 17:07:46 +0900] [5031] [INFO] Booting worker with pid: 5031
+[2024-08-09 17:07:46 +0900] [5032] [INFO] Booting worker with pid: 5032
+[2024-08-09 17:07:46 +0900] [5033] [INFO] Booting worker with pid: 5033
+[2024-08-09 17:07:59 +0900] [5022] [INFO] Started server process [5022]
+[2024-08-09 17:07:59 +0900] [5027] [INFO] Started server process [5027]
+[2024-08-09 17:07:59 +0900] [5033] [INFO] Started server process [5033]
+[2024-08-09 17:07:59 +0900] [5022] [INFO] Waiting for application startup.
+[2024-08-09 17:07:59 +0900] [5027] [INFO] Waiting for application startup.
+[2024-08-09 17:07:59 +0900] [5033] [INFO] Waiting for application startup.
+[2024-08-09 17:07:59 +0900] [5024] [INFO] Started server process [5024]
+[2024-08-09 17:07:59 +0900] [5024] [INFO] Waiting for application startup.
+[2024-08-09 17:07:59 +0900] [5022] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-09 17:07:59 +0900] [5027] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-09 17:07:59 +0900] [5033] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-09 17:07:59 +0900] [5022] [INFO] Application startup complete.
+[2024-08-09 17:07:59 +0900] [5027] [INFO] Application startup complete.
+[2024-08-09 17:07:59 +0900] [5033] [INFO] Application startup complete.
+[2024-08-09 17:07:59 +0900] [5024] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-09 17:07:59 +0900] [5024] [INFO] Application startup complete.
+[2024-08-09 17:07:59 +0900] [5030] [INFO] Started server process [5030]
+[2024-08-09 17:07:59 +0900] [5030] [INFO] Waiting for application startup.
+[2024-08-09 17:07:59 +0900] [5030] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-09 17:07:59 +0900] [5030] [INFO] Application startup complete.
+[2024-08-09 17:07:59 +0900] [5032] [INFO] Started server process [5032]
+[2024-08-09 17:07:59 +0900] [5032] [INFO] Waiting for application startup.
+[2024-08-09 17:07:59 +0900] [5032] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-09 17:07:59 +0900] [5032] [INFO] Application startup complete.
+[2024-08-09 17:07:59 +0900] [5029] [INFO] Started server process [5029]
+[2024-08-09 17:07:59 +0900] [5029] [INFO] Waiting for application startup.
+[2024-08-09 17:07:59 +0900] [5029] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-09 17:07:59 +0900] [5029] [INFO] Application startup complete.
+[2024-08-09 17:07:59 +0900] [5025] [INFO] Started server process [5025]
+[2024-08-09 17:07:59 +0900] [5025] [INFO] Waiting for application startup.
+[2024-08-09 17:07:59 +0900] [5025] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-09 17:07:59 +0900] [5025] [INFO] Application startup complete.
+[2024-08-09 17:07:59 +0900] [5031] [INFO] Started server process [5031]
+[2024-08-09 17:07:59 +0900] [5023] [INFO] Started server process [5023]
+[2024-08-09 17:07:59 +0900] [5031] [INFO] Waiting for application startup.
+[2024-08-09 17:07:59 +0900] [5023] [INFO] Waiting for application startup.
+[2024-08-09 17:07:59 +0900] [5031] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-09 17:07:59 +0900] [5023] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-09 17:07:59 +0900] [5031] [INFO] Application startup complete.
+[2024-08-09 17:07:59 +0900] [5023] [INFO] Application startup complete.
+[2024-08-09 17:07:59 +0900] [5026] [INFO] Started server process [5026]
+[2024-08-09 17:07:59 +0900] [5026] [INFO] Waiting for application startup.
+[2024-08-09 17:07:59 +0900] [5026] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-09 17:07:59 +0900] [5026] [INFO] Application startup complete.
+[2024-08-09 17:08:00 +0900] [5028] [INFO] Started server process [5028]
+[2024-08-09 17:08:00 +0900] [5028] [INFO] Waiting for application startup.
+[2024-08-09 17:08:00 +0900] [5028] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-09 17:08:00 +0900] [5028] [INFO] Application startup complete.
+[2024-08-09 17:18:37 +0900] [10637] [INFO] Starting gunicorn 22.0.0
+[2024-08-09 17:18:37 +0900] [10637] [ERROR] Connection in use: ('0.0.0.0', 8001)
+[2024-08-09 17:18:37 +0900] [10637] [ERROR] Retrying in 1 second.
+[2024-08-09 17:18:38 +0900] [10637] [ERROR] Connection in use: ('0.0.0.0', 8001)
+[2024-08-09 17:18:38 +0900] [10637] [ERROR] Retrying in 1 second.
+[2024-08-09 17:18:39 +0900] [10637] [ERROR] Connection in use: ('0.0.0.0', 8001)
+[2024-08-09 17:18:39 +0900] [10637] [ERROR] Retrying in 1 second.
+[2024-08-09 17:18:40 +0900] [10637] [ERROR] Connection in use: ('0.0.0.0', 8001)
+[2024-08-09 17:18:40 +0900] [10637] [ERROR] Retrying in 1 second.
+[2024-08-09 17:18:41 +0900] [10637] [ERROR] Connection in use: ('0.0.0.0', 8001)
+[2024-08-09 17:18:41 +0900] [10637] [ERROR] Retrying in 1 second.
+[2024-08-09 17:18:42 +0900] [10637] [ERROR] Can't connect to ('0.0.0.0', 8001)
+[2024-08-09 18:12:16 +0900] [5020] [INFO] Handling signal: term
+[2024-08-09 18:12:16 +0900] [5031] [INFO] Shutting down
+[2024-08-09 18:12:16 +0900] [5031] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-09 18:12:16 +0900] [5025] [INFO] Shutting down
+[2024-08-09 18:12:16 +0900] [5025] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-09 18:12:16 +0900] [5032] [INFO] Shutting down
+[2024-08-09 18:12:16 +0900] [5032] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-09 18:12:16 +0900] [5026] [INFO] Shutting down
+[2024-08-09 18:12:16 +0900] [5026] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-09 18:12:16 +0900] [5029] [INFO] Shutting down
+[2024-08-09 18:12:16 +0900] [5029] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-09 18:12:16 +0900] [5023] [INFO] Shutting down
+[2024-08-09 18:12:16 +0900] [5023] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-09 18:12:16 +0900] [5028] [INFO] Shutting down
+[2024-08-09 18:12:16 +0900] [5028] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-09 18:12:16 +0900] [5027] [INFO] Shutting down
+[2024-08-09 18:12:16 +0900] [5027] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-09 18:12:16 +0900] [5033] [INFO] Shutting down
+[2024-08-09 18:12:16 +0900] [5033] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-09 18:12:16 +0900] [5024] [INFO] Shutting down
+[2024-08-09 18:12:16 +0900] [5024] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-09 18:12:16 +0900] [5022] [INFO] Shutting down
+[2024-08-09 18:12:16 +0900] [5022] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-09 18:12:16 +0900] [5030] [INFO] Shutting down
+[2024-08-09 18:12:16 +0900] [5030] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-09 18:12:16 +0900] [5031] [INFO] Finished server process [5031]
+[2024-08-09 18:12:16 +0900] [5025] [INFO] Finished server process [5025]
+[2024-08-09 18:12:16 +0900] [5032] [INFO] Finished server process [5032]
+[2024-08-09 18:12:16 +0900] [5026] [INFO] Finished server process [5026]
+[2024-08-09 18:12:16 +0900] [5029] [INFO] Finished server process [5029]
+[2024-08-09 18:12:16 +0900] [5023] [INFO] Finished server process [5023]
+[2024-08-09 18:12:16 +0900] [5020] [ERROR] Worker (pid:5025) was sent SIGTERM!
+[2024-08-09 18:12:16 +0900] [5028] [INFO] Finished server process [5028]
+[2024-08-09 18:12:16 +0900] [5027] [INFO] Finished server process [5027]
+[2024-08-09 18:12:16 +0900] [5033] [INFO] Finished server process [5033]
+[2024-08-09 18:12:16 +0900] [5024] [INFO] Finished server process [5024]
+[2024-08-09 18:12:16 +0900] [5022] [INFO] Finished server process [5022]
+[2024-08-09 18:12:16 +0900] [5030] [INFO] Finished server process [5030]
+[2024-08-09 18:12:16 +0900] [5020] [ERROR] Worker (pid:5022) was sent SIGTERM!
+[2024-08-09 18:12:16 +0900] [5020] [ERROR] Worker (pid:5023) was sent SIGTERM!
+[2024-08-09 18:12:16 +0900] [5020] [ERROR] Worker (pid:5028) was sent SIGTERM!
+[2024-08-09 18:12:16 +0900] [5020] [ERROR] Worker (pid:5033) was sent SIGTERM!
+[2024-08-09 18:12:16 +0900] [5020] [ERROR] Worker (pid:5030) was sent SIGTERM!
+[2024-08-09 18:12:16 +0900] [5020] [ERROR] Worker (pid:5027) was sent SIGTERM!
+[2024-08-09 18:12:16 +0900] [5020] [INFO] Shutting down: Master
+[2024-08-09 19:04:59 +0900] [18842] [INFO] Starting gunicorn 22.0.0
+[2024-08-09 19:04:59 +0900] [18842] [INFO] Listening at: http://0.0.0.0:8001 (18842)
+[2024-08-09 19:04:59 +0900] [18842] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2024-08-09 19:04:59 +0900] [18844] [INFO] Booting worker with pid: 18844
+[2024-08-09 19:04:59 +0900] [18845] [INFO] Booting worker with pid: 18845
+[2024-08-09 19:04:59 +0900] [18846] [INFO] Booting worker with pid: 18846
+[2024-08-09 19:04:59 +0900] [18847] [INFO] Booting worker with pid: 18847
+[2024-08-09 19:04:59 +0900] [18848] [INFO] Booting worker with pid: 18848
+[2024-08-09 19:04:59 +0900] [18849] [INFO] Booting worker with pid: 18849
+[2024-08-09 19:04:59 +0900] [18850] [INFO] Booting worker with pid: 18850
+[2024-08-09 19:04:59 +0900] [18851] [INFO] Booting worker with pid: 18851
+[2024-08-09 19:04:59 +0900] [18852] [INFO] Booting worker with pid: 18852
+[2024-08-09 19:04:59 +0900] [18853] [INFO] Booting worker with pid: 18853
+[2024-08-09 19:04:59 +0900] [18854] [INFO] Booting worker with pid: 18854
+[2024-08-09 19:04:59 +0900] [18855] [INFO] Booting worker with pid: 18855
+[2024-08-09 19:05:34 +0900] [18853] [INFO] Started server process [18853]
+[2024-08-09 19:05:34 +0900] [18848] [INFO] Started server process [18848]
+[2024-08-09 19:05:34 +0900] [18855] [INFO] Started server process [18855]
+[2024-08-09 19:05:34 +0900] [18852] [INFO] Started server process [18852]
+[2024-08-09 19:05:34 +0900] [18851] [INFO] Started server process [18851]
+[2024-08-09 19:05:34 +0900] [18849] [INFO] Started server process [18849]
+[2024-08-09 19:05:34 +0900] [18844] [INFO] Started server process [18844]
+[2024-08-09 19:05:34 +0900] [18847] [INFO] Started server process [18847]
+[2024-08-09 19:05:34 +0900] [18854] [INFO] Started server process [18854]
+[2024-08-09 19:05:34 +0900] [18850] [INFO] Started server process [18850]
+[2024-08-09 19:05:34 +0900] [18853] [INFO] Waiting for application startup.
+[2024-08-09 19:05:34 +0900] [18848] [INFO] Waiting for application startup.
+[2024-08-09 19:05:34 +0900] [18855] [INFO] Waiting for application startup.
+[2024-08-09 19:05:34 +0900] [18852] [INFO] Waiting for application startup.
+[2024-08-09 19:05:34 +0900] [18851] [INFO] Waiting for application startup.
+[2024-08-09 19:05:34 +0900] [18849] [INFO] Waiting for application startup.
+[2024-08-09 19:05:34 +0900] [18844] [INFO] Waiting for application startup.
+[2024-08-09 19:05:34 +0900] [18847] [INFO] Waiting for application startup.
+[2024-08-09 19:05:34 +0900] [18854] [INFO] Waiting for application startup.
+[2024-08-09 19:05:34 +0900] [18850] [INFO] Waiting for application startup.
+[2024-08-09 19:05:34 +0900] [18848] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-09 19:05:34 +0900] [18853] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-09 19:05:34 +0900] [18855] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-09 19:05:34 +0900] [18852] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-09 19:05:34 +0900] [18851] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-09 19:05:34 +0900] [18849] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-09 19:05:34 +0900] [18844] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-09 19:05:34 +0900] [18847] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-09 19:05:34 +0900] [18854] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-09 19:05:34 +0900] [18850] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-09 19:05:34 +0900] [18848] [INFO] Application startup complete.
+[2024-08-09 19:05:34 +0900] [18853] [INFO] Application startup complete.
+[2024-08-09 19:05:34 +0900] [18855] [INFO] Application startup complete.
+[2024-08-09 19:05:34 +0900] [18852] [INFO] Application startup complete.
+[2024-08-09 19:05:34 +0900] [18851] [INFO] Application startup complete.
+[2024-08-09 19:05:34 +0900] [18849] [INFO] Application startup complete.
+[2024-08-09 19:05:34 +0900] [18844] [INFO] Application startup complete.
+[2024-08-09 19:05:34 +0900] [18847] [INFO] Application startup complete.
+[2024-08-09 19:05:34 +0900] [18854] [INFO] Application startup complete.
+[2024-08-09 19:05:34 +0900] [18850] [INFO] Application startup complete.
+[2024-08-09 19:05:34 +0900] [18845] [INFO] Started server process [18845]
+[2024-08-09 19:05:34 +0900] [18845] [INFO] Waiting for application startup.
+[2024-08-09 19:05:34 +0900] [18845] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-09 19:05:34 +0900] [18845] [INFO] Application startup complete.
+[2024-08-09 19:05:34 +0900] [18846] [INFO] Started server process [18846]
+[2024-08-09 19:05:34 +0900] [18846] [INFO] Waiting for application startup.
+[2024-08-09 19:05:34 +0900] [18846] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-09 19:05:34 +0900] [18846] [INFO] Application startup complete.
+[2024-08-12 17:32:21 +0900] [18842] [INFO] Handling signal: term
+[2024-08-12 17:32:21 +0900] [18849] [INFO] Shutting down
+[2024-08-12 17:32:21 +0900] [18853] [INFO] Shutting down
+[2024-08-12 17:32:21 +0900] [18846] [INFO] Shutting down
+[2024-08-12 17:32:21 +0900] [18851] [INFO] Shutting down
+[2024-08-12 17:32:21 +0900] [18854] [INFO] Shutting down
+[2024-08-12 17:32:21 +0900] [18849] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-12 17:32:21 +0900] [18853] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-12 17:32:21 +0900] [18846] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-12 17:32:21 +0900] [18854] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-12 17:32:21 +0900] [18851] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-12 17:32:21 +0900] [18850] [INFO] Shutting down
+[2024-08-12 17:32:21 +0900] [18850] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-12 17:32:21 +0900] [18845] [INFO] Shutting down
+[2024-08-12 17:32:21 +0900] [18845] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-12 17:32:21 +0900] [18847] [INFO] Shutting down
+[2024-08-12 17:32:21 +0900] [18847] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-12 17:32:21 +0900] [18855] [INFO] Shutting down
+[2024-08-12 17:32:21 +0900] [18855] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-12 17:32:21 +0900] [18852] [INFO] Shutting down
+[2024-08-12 17:32:21 +0900] [18852] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-12 17:32:21 +0900] [18848] [INFO] Shutting down
+[2024-08-12 17:32:21 +0900] [18844] [INFO] Shutting down
+[2024-08-12 17:32:21 +0900] [18848] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-12 17:32:21 +0900] [18844] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-12 17:32:21 +0900] [18849] [INFO] Finished server process [18849]
+[2024-08-12 17:32:21 +0900] [18853] [INFO] Finished server process [18853]
+[2024-08-12 17:32:21 +0900] [18854] [INFO] Finished server process [18854]
+[2024-08-12 17:32:21 +0900] [18846] [INFO] Finished server process [18846]
+[2024-08-12 17:32:21 +0900] [18851] [INFO] Finished server process [18851]
+[2024-08-12 17:32:21 +0900] [18850] [INFO] Finished server process [18850]
+[2024-08-12 17:32:21 +0900] [18855] [INFO] Finished server process [18855]
+[2024-08-12 17:32:21 +0900] [18848] [INFO] Finished server process [18848]
+[2024-08-12 17:32:21 +0900] [18844] [INFO] Finished server process [18844]
+[2024-08-12 17:32:21 +0900] [18852] [INFO] Finished server process [18852]
+[2024-08-12 17:32:21 +0900] [18847] [INFO] Finished server process [18847]
+[2024-08-12 17:32:21 +0900] [18845] [INFO] Finished server process [18845]
+[2024-08-12 17:32:23 +0900] [18842] [ERROR] Worker (pid:18846) was sent SIGTERM!
+[2024-08-12 17:32:23 +0900] [18842] [ERROR] Worker (pid:18844) was sent SIGTERM!
+[2024-08-12 17:32:23 +0900] [18842] [ERROR] Worker (pid:18852) was sent SIGTERM!
+[2024-08-12 17:32:23 +0900] [18842] [ERROR] Worker (pid:18854) was sent SIGTERM!
+[2024-08-12 17:32:23 +0900] [18842] [ERROR] Worker (pid:18853) was sent SIGTERM!
+[2024-08-12 17:32:23 +0900] [18842] [ERROR] Worker (pid:18845) was sent SIGTERM!
+[2024-08-12 17:32:23 +0900] [18842] [ERROR] Worker (pid:18850) was sent SIGTERM!
+[2024-08-12 17:32:23 +0900] [18842] [ERROR] Worker (pid:18847) was sent SIGTERM!
+[2024-08-12 17:32:23 +0900] [18842] [ERROR] Worker (pid:18848) was sent SIGTERM!
+[2024-08-12 17:32:23 +0900] [18842] [ERROR] Worker (pid:18849) was sent SIGTERM!
+[2024-08-12 17:32:23 +0900] [18842] [ERROR] Worker (pid:18851) was sent SIGTERM!
+[2024-08-12 17:32:24 +0900] [18842] [ERROR] Worker (pid:18855) was sent SIGTERM!
+[2024-08-12 17:32:24 +0900] [18842] [INFO] Shutting down: Master
+[2024-08-12 17:33:08 +0900] [860114] [INFO] Starting gunicorn 22.0.0
+[2024-08-12 17:33:08 +0900] [860114] [INFO] Listening at: http://0.0.0.0:8001 (860114)
+[2024-08-12 17:33:08 +0900] [860114] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2024-08-12 17:33:08 +0900] [860116] [INFO] Booting worker with pid: 860116
+[2024-08-12 17:33:08 +0900] [860117] [INFO] Booting worker with pid: 860117
+[2024-08-12 17:33:08 +0900] [860118] [INFO] Booting worker with pid: 860118
+[2024-08-12 17:33:08 +0900] [860119] [INFO] Booting worker with pid: 860119
+[2024-08-12 17:33:30 +0900] [860119] [INFO] Started server process [860119]
+[2024-08-12 17:33:30 +0900] [860119] [INFO] Waiting for application startup.
+[2024-08-12 17:33:30 +0900] [860119] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-12 17:33:30 +0900] [860119] [INFO] Application startup complete.
+[2024-08-12 17:33:31 +0900] [860116] [INFO] Started server process [860116]
+[2024-08-12 17:33:31 +0900] [860116] [INFO] Waiting for application startup.
+[2024-08-12 17:33:31 +0900] [860116] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-12 17:33:31 +0900] [860116] [INFO] Application startup complete.
+[2024-08-12 17:33:31 +0900] [860117] [INFO] Started server process [860117]
+[2024-08-12 17:33:31 +0900] [860117] [INFO] Waiting for application startup.
+[2024-08-12 17:33:31 +0900] [860117] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-12 17:33:31 +0900] [860117] [INFO] Application startup complete.
+[2024-08-12 17:33:31 +0900] [860118] [INFO] Started server process [860118]
+[2024-08-12 17:33:31 +0900] [860118] [INFO] Waiting for application startup.
+[2024-08-12 17:33:31 +0900] [860118] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-12 17:33:31 +0900] [860118] [INFO] Application startup complete.
+[2024-08-12 19:16:44 +0900] [860114] [INFO] Handling signal: term
+[2024-08-12 19:16:44 +0900] [860119] [INFO] Shutting down
+[2024-08-12 19:16:44 +0900] [860119] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-12 19:16:44 +0900] [860118] [INFO] Shutting down
+[2024-08-12 19:16:44 +0900] [860118] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-12 19:16:44 +0900] [860117] [INFO] Shutting down
+[2024-08-12 19:16:44 +0900] [860117] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-12 19:16:44 +0900] [860116] [INFO] Shutting down
+[2024-08-12 19:16:44 +0900] [860116] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-12 19:16:44 +0900] [860119] [INFO] Finished server process [860119]
+[2024-08-12 19:16:44 +0900] [860118] [INFO] Finished server process [860118]
+[2024-08-12 19:16:44 +0900] [860117] [INFO] Finished server process [860117]
+[2024-08-12 19:16:44 +0900] [860116] [INFO] Finished server process [860116]
+[2024-08-12 19:16:44 +0900] [860114] [ERROR] Worker (pid:860119) was sent SIGTERM!
+[2024-08-12 19:16:44 +0900] [860114] [ERROR] Worker (pid:860118) was sent SIGTERM!
+[2024-08-12 19:16:44 +0900] [860114] [ERROR] Worker (pid:860117) was sent SIGTERM!
+[2024-08-12 19:16:44 +0900] [860114] [ERROR] Worker (pid:860116) was sent SIGTERM!
+[2024-08-12 19:16:45 +0900] [860114] [INFO] Shutting down: Master
+[2024-08-12 19:16:48 +0900] [906276] [INFO] Starting gunicorn 22.0.0
+[2024-08-12 19:16:48 +0900] [906276] [INFO] Listening at: http://0.0.0.0:8001 (906276)
+[2024-08-12 19:16:48 +0900] [906276] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2024-08-12 19:16:48 +0900] [906278] [INFO] Booting worker with pid: 906278
+[2024-08-12 19:16:48 +0900] [906279] [INFO] Booting worker with pid: 906279
+[2024-08-12 19:16:48 +0900] [906280] [INFO] Booting worker with pid: 906280
+[2024-08-12 19:16:48 +0900] [906281] [INFO] Booting worker with pid: 906281
+[2024-08-12 19:16:48 +0900] [906282] [INFO] Booting worker with pid: 906282
+[2024-08-12 19:16:48 +0900] [906283] [INFO] Booting worker with pid: 906283
+[2024-08-12 19:17:10 +0900] [906278] [INFO] Started server process [906278]
+[2024-08-12 19:17:10 +0900] [906278] [INFO] Waiting for application startup.
+[2024-08-12 19:17:10 +0900] [906278] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-12 19:17:10 +0900] [906278] [INFO] Application startup complete.
+[2024-08-12 19:17:10 +0900] [906279] [INFO] Started server process [906279]
+[2024-08-12 19:17:10 +0900] [906279] [INFO] Waiting for application startup.
+[2024-08-12 19:17:10 +0900] [906279] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-12 19:17:10 +0900] [906279] [INFO] Application startup complete.
+[2024-08-12 19:17:10 +0900] [906282] [INFO] Started server process [906282]
+[2024-08-12 19:17:10 +0900] [906282] [INFO] Waiting for application startup.
+[2024-08-12 19:17:10 +0900] [906282] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-12 19:17:10 +0900] [906282] [INFO] Application startup complete.
+[2024-08-12 19:17:11 +0900] [906280] [INFO] Started server process [906280]
+[2024-08-12 19:17:11 +0900] [906280] [INFO] Waiting for application startup.
+[2024-08-12 19:17:11 +0900] [906280] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-12 19:17:11 +0900] [906280] [INFO] Application startup complete.
+[2024-08-12 19:17:11 +0900] [906283] [INFO] Started server process [906283]
+[2024-08-12 19:17:11 +0900] [906283] [INFO] Waiting for application startup.
+[2024-08-12 19:17:11 +0900] [906283] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-12 19:17:11 +0900] [906283] [INFO] Application startup complete.
+[2024-08-12 19:17:11 +0900] [906281] [INFO] Started server process [906281]
+[2024-08-12 19:17:11 +0900] [906281] [INFO] Waiting for application startup.
+[2024-08-12 19:17:11 +0900] [906281] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-12 19:17:11 +0900] [906281] [INFO] Application startup complete.
+[2024-08-27 13:20:00 +0900] [906276] [CRITICAL] WORKER TIMEOUT (pid:906280)
+[2024-08-27 13:20:01 +0900] [906276] [ERROR] Worker (pid:906280) was sent code 134!
+[2024-08-27 13:20:01 +0900] [798198] [INFO] Booting worker with pid: 798198
+[2024-08-27 13:20:18 +0900] [798198] [INFO] Started server process [798198]
+[2024-08-27 13:20:18 +0900] [798198] [INFO] Waiting for application startup.
+[2024-08-27 13:20:18 +0900] [798198] [INFO] ASGI 'lifespan' protocol appears unsupported.
+[2024-08-27 13:20:18 +0900] [798198] [INFO] Application startup complete.
